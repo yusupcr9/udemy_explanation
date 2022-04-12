@@ -1,6 +1,8 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:udemy_explanation/application/example_provider.dart';
+import 'package:udemy_explanation/router/router.gr.dart';
 
 class SecondPage extends StatefulWidget {
   const SecondPage({Key? key, required this.nama, required this.umur})
@@ -29,9 +31,10 @@ class _SecondPageState extends State<SecondPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          data1++;
-          setState(() {});
-          context.read<ExampleProvider>().setDataString(data1.toString());
+          context.router.push(ThirdRoute());
+          // data1++;
+          // setState(() {});
+          // context.read<ExampleProvider>().setDataString(data1.toString());
         },
       ),
     );
