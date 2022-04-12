@@ -24,7 +24,7 @@ class _FirstPageState extends State<FirstPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              exampleProvider.getDataString,
+              exampleProvider.getDataString ?? "",
               style: TextStyle(fontSize: 30),
             ),
             ElevatedButton(

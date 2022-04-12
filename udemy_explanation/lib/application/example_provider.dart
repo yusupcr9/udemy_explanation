@@ -1,12 +1,12 @@
-import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 
 class ExampleProvider extends ChangeNotifier {
-  late String _data;
+  String? _data;
 
   void setDataString(String data) {
     _data = data;
     notifyListeners();
   }
 
-  String get getDataString => _data;
+  String? get getDataString => _data;
 }
